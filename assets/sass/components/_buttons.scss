@@ -1,0 +1,33 @@
+.btn {
+  &-normal {
+    font-weight: 500;
+    color: $grayishViolet;
+    background: transparent;
+    border: none;
+  }
+  font-weight: 500;
+  border: none;
+  transition: all 0.25s linear;
+  &-primary {
+    color: #fff;
+    background-color: $cyan;
+    &:hover {
+      background-color: $cyanLight;
+    }
+  }
+  &-signup {
+    border-radius: 20px;
+    padding: 0 25px;
+    height: 40px;
+  }
+  &-main {
+    height: 55px;
+    padding: 0 40px;
+    border-radius: 30px;
+  }
+  &-form {
+    padding: 0 40px;
+    height: 65px;
+    border-radius: 10px;
+  }
+}

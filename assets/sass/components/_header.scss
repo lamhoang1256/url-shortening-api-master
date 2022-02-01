@@ -1,0 +1,122 @@
+.header {
+  padding: 50px 0;
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-toggle {
+      display: none;
+      ion-icon {
+        font-size: 3.2rem;
+        cursor: pointer;
+      }
+    }
+    &-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-action {
+      display: flex;
+      gap: 30px 40px;
+    }
+    &-logo {
+      margin-right: 45px;
+    }
+    &-menu {
+      display: flex;
+      gap: 30px;
+    }
+    &-link {
+      color: $grayishViolet;
+      &:hover {
+        color: $violetDarker;
+      }
+    }
+  }
+  &-main {
+    display: flex;
+    margin-top: 80px;
+  }
+  &-heading {
+    font-size: 8.3rem;
+    line-height: 115%;
+    font-weight: 700;
+    color: $blueDarker;
+  }
+  &-desc {
+    max-width: 600px;
+    font-size: 2.4rem;
+    color: $grayishViolet;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .header {
+    &-main {
+      flex-direction: column-reverse;
+      text-align: center;
+      .btn-main {
+        height: 70px;
+        padding: 0 50px;
+        border-radius: 20px;
+        font-size: 2.4rem;
+      }
+    }
+    &-heading {
+      margin-top: 20px;
+    }
+    &-desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header {
+    &-heading {
+      font-size: 4.4rem;
+      margin: 30px 0 20px;
+    }
+    &-desc {
+      font-size: 2rem;
+    }
+    .navbar {
+      &-toggle {
+        display: block;
+      }
+      &-right {
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        flex-direction: column;
+        background-color: $violetBg;
+        padding: 40px 0;
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s ease-in-out;
+        &.show {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+      &-link,
+      &-btn {
+        color: #fff;
+      }
+      &-action {
+        flex-direction: column;
+        margin-top: 30px;
+      }
+    }
+  }
+}

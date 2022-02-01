@@ -1,0 +1,133 @@
+.statistic {
+  padding: 200px 0;
+  background-color: $grayBg;
+  &-header {
+    max-width: 530px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  &-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 100px;
+    position: relative;
+  }
+  &-item {
+    padding: 50px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    &-2 {
+      transform: translateY(45px);
+    }
+    &-3 {
+      transform: translateY(90px);
+    }
+  }
+  &-vertical {
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    top: 55%;
+    background-color: $cyan;
+    z-index: 1;
+  }
+  &-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 100rem;
+    background-color: $violetDark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+  }
+}
+.link {
+  &-list {
+    margin-top: -85px;
+  }
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-top: 20px;
+  }
+  &-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 30px;
+  }
+  &-name {
+    color: $violetDarker;
+  }
+  &-shorter {
+    color: $cyan;
+  }
+  &-btn {
+    // padding: 0 30px;
+    border-radius: 10px;
+    height: 40px;
+    min-width: 130px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .statistic {
+    &-list {
+      flex-wrap: wrap;
+    }
+    &-item {
+      text-align: center;
+    }
+    &-circle {
+      margin: 0 auto;
+    }
+  }
+  .link {
+    &-name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      padding: 0 20px;
+    }
+    &-item {
+      flex-direction: column;
+      gap: 20px 0;
+      padding: 20px 0;
+    }
+    &-action {
+      border-top: 1px solid $gray;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 20px 0;
+      padding: 20px 20px 0;
+    }
+    &-shorter {
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    &-btn {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .statistic {
+    &-vertical {
+      width: 6px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.boost {
+  background-image: url("../../../images/bg-boost-desktop.svg");
+  background-color: $violetBg;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  &-main {
+    padding: 50px 0;
+    color: #fff;
+  }
+  &-btn {
+    margin-top: 20px;
+  }
+}
