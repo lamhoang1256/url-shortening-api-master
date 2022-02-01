@@ -65,6 +65,9 @@
   }
   &-name {
     color: $violetDarker;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   &-shorter {
     color: $cyan;
@@ -90,9 +93,6 @@
   }
   .link {
     &-name {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
       width: 100%;
       padding: 0 20px;
     }
