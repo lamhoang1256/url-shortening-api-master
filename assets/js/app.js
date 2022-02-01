@@ -19,6 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
       getMessenger("error", "Please add a link");
     } else {
       getMessenger("success", "Getting url shorten...");
+      formSubmit.textContent = "Shorting ...";
       createURLshorten(formInputValue);
     }
   });
@@ -38,6 +39,8 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>`;
       formInput.value = "";
+      formSubmit.textContent = "Shorten It!";
+
       linkItem = Array.from(document.querySelectorAll(".link-item"));
       addEventCopyForButton();
     } catch (err) {
