@@ -390,6 +390,9 @@ body {
 }
 .link-name {
   color: #232127;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .link-shorter {
   color: #2acfcf;
@@ -412,9 +415,6 @@ body {
   }
 
   .link-name {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
     width: 100%;
     padding: 0 20px;
   }
