@@ -9,9 +9,6 @@ window.addEventListener("DOMContentLoaded", () => {
   let linkItem;
   let urlShorted;
 
-  toggle.addEventListener("click", function () {
-    navbarRight.classList.toggle("show");
-  });
   //check value input if '' => messenge error
   formSubmit.addEventListener("click", function () {
     let formInputValue = formInput.value.trim();
@@ -40,7 +37,6 @@ window.addEventListener("DOMContentLoaded", () => {
       </div>`;
       formInput.value = "";
       formSubmit.textContent = "Shorten It!";
-
       linkItem = Array.from(document.querySelectorAll(".link-item"));
       addEventCopyForButton();
     } catch (err) {
@@ -85,4 +81,8 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log("Something went wrong", err);
       });
   }
+  //toggle menu
+  toggle.addEventListener("click", function () {
+    navbarRight.classList.toggle("show");
+  });
 });
